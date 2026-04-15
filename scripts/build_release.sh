@@ -10,10 +10,17 @@ ZIP_PATH="$DIST_DIR/${PACKAGE_NAME}.zip"
 
 rm -rf "$PACKAGE_DIR" "$ZIP_PATH"
 mkdir -p "$PACKAGE_DIR/lang" "$PACKAGE_DIR/docs"
+mkdir -p "$PACKAGE_DIR/scripts"
 
 cp "$ROOT_DIR/lang/default" "$PACKAGE_DIR/lang/default"
 cp "$ROOT_DIR/README.md" "$PACKAGE_DIR/README.md"
+cp "$ROOT_DIR/AGENTS.md" "$PACKAGE_DIR/AGENTS.md"
+cp "$ROOT_DIR/CHANGELOG.md" "$PACKAGE_DIR/CHANGELOG.md"
 cp "$ROOT_DIR/docs/install-guide-zh-CN.md" "$PACKAGE_DIR/docs/install-guide-zh-CN.md"
+cp "$ROOT_DIR/scripts/validate_lang.py" "$PACKAGE_DIR/scripts/validate_lang.py"
+cp "$ROOT_DIR/scripts/build_release.sh" "$PACKAGE_DIR/scripts/build_release.sh"
+cp "$ROOT_DIR/scripts/install_macos.sh" "$PACKAGE_DIR/scripts/install_macos.sh"
+cp "$ROOT_DIR/scripts/install_windows.ps1" "$PACKAGE_DIR/scripts/install_windows.ps1"
 
 (
   cd "$DIST_DIR"

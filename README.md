@@ -24,6 +24,8 @@ README 撰写者：Codex（基于 GPT-5）
 - `CHANGELOG.md`：版本变更记录
 - `scripts/validate_lang.py`：语言文件结构校验脚本
 - `scripts/build_release.sh`：Release 打包脚本
+- `scripts/install_macos.sh`：macOS 自动安装脚本
+- `scripts/install_windows.ps1`：Windows 自动安装脚本
 
 ## 适用范围
 
@@ -54,8 +56,33 @@ README 撰写者：Codex（基于 GPT-5）
 - 根目录提供 `AGENTS.md`，说明关键文件、约束和发布流程
 - 提供 `scripts/validate_lang.py` 用于校验占位符和链接标签是否被改坏
 - 提供 `scripts/build_release.sh` 用于标准化打包产物
+- 提供 `scripts/install_macos.sh` 与 `scripts/install_windows.ps1` 作为直接执行入口
+
+你可以将仓库链接复制给你的 agent，其会自动完成一切。
+
+更准确地说，这个仓库已经尽量做成“把仓库地址直接给 agent，agent 就能帮助用户完成配置”的形态。一个合格的 agent 在接手后应当能够：
+
+1. 阅读 `AGENTS.md`
+2. 校验 `lang/default` 的结构完整性
+3. 自动识别或接收 Axure 安装路径
+4. 将 `lang/default` 安装到正确位置
+5. 在需要时完成打包与发布
 
 如果你是让 AI agent 或自动化脚本维护这个仓库，建议先阅读 [AGENTS.md](./AGENTS.md)。
+
+## Agent 直接安装
+
+macOS：
+
+```bash
+bash scripts/install_macos.sh
+```
+
+Windows PowerShell：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install_windows.ps1
+```
 
 ## 本地校验
 
@@ -74,6 +101,7 @@ bash scripts/build_release.sh
 - Axure 更新后，语言文件可能会被覆盖，需要重新替换一次。
 - 不同大版本之间不要混用语言文件。
 - `lang/default` 是 UTF-16 文件，不要随意改编码或添加后缀名。
+- 如果你希望 agent 自动安装，推荐直接让它执行 `scripts/install_macos.sh` 或 `scripts/install_windows.ps1`。
 - 这是对社区版本做清理与修订后的非官方包，建议在替换前自行确认当前 Axure 版本。
 
 ## 免责声明
