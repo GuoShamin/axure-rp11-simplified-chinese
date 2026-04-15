@@ -1,6 +1,10 @@
 # Axure RP 11 Simplified Chinese
 
-> 你可以将仓库链接复制给你的 agent，其会自动完成一切：`https://github.com/GuoShamin/axure-rp11-simplified-chinese`
+> 你可以将下面这个仓库链接复制给你的 agent，其会自动完成一切。
+
+```text
+https://github.com/GuoShamin/axure-rp11-simplified-chinese
+```
 
 Axure RP 11 的非官方简体中文语言包，包含清理后的 `lang/default` 文件、安装教程，以及面向代理协作的维护说明与校验脚本。
 
