@@ -1,13 +1,24 @@
 # Changelog
 
+## v1.2
+
+- kept the repository Chinese-first for its primary user base
+- added `README.en.md` as an English companion README
+- added `AGENTS.en.md` as an English companion agent guide
+- added `docs/install-guide.md` as an English companion install guide
+- kept the existing Chinese install guide as the default Chinese document
+- updated packaging so releases include both Chinese-default and English companion docs
+- updated installer script output to be English-friendly while preserving Chinese-first docs
+- kept the repository landing page optimized for agent handoff
+
 ## v1.1
 
-- 将头部署名更新为 `Evin`
-- 移除原包中的署名植入、外链宣传和插入式提示
-- 修复占位符、链接标签和部分格式异常
-- 统一一批 RP 11 `component` 相关术语
-- 优化欢迎页、测试版提示、安装相关提示文案
-- 清理多处低质量样例文案与明显错译
-- 新增安装教程、代理协作说明和本地校验/打包脚本
-- 新增面向 agent 的 macOS / Windows 自动安装脚本
-- 优化 README，使用户可直接将仓库链接交给 agent 使用
+- updated the language-file header attribution to `Evin`
+- removed embedded signatures, promo links, and injected notices
+- fixed placeholders, anchor tags, and several formatting issues
+- normalized a set of RP 11 `component`-related terms
+- improved welcome, beta, and installation-related strings
+- cleaned multiple low-quality sample strings and obvious mistranslations
+- added installation docs, agent handoff docs, and validation/packaging scripts
+- added agent-oriented macOS and Windows install scripts
+- updated the README so users could hand the repository link directly to an agent

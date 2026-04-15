@@ -1,8 +1,24 @@
-# Axure RP 11 简体中文安装教程
+# Axure RP 11 中文安装指南
 
 本文适用于本仓库中的 `lang/default` 文件。
 
-## macOS 安装步骤
+## 让 Agent 直接安装
+
+如果你在使用 agent，优先让它执行仓库内脚本，而不是手动复制文件。
+
+macOS：
+
+```bash
+bash scripts/install_macos.sh
+```
+
+Windows PowerShell：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install_windows.ps1
+```
+
+## macOS 手动安装
 
 1. 完全退出 `Axure RP 11`。
 2. 打开“应用程序”目录，找到 `Axure RP 11.app`。
@@ -15,9 +31,9 @@
 
 5. 将本仓库中的 `lang/default` 复制到上面的目录中。
 6. 当系统提示替换时，选择替换原文件。
-7. 重新打开 `Axure RP 11`，界面应切换为简体中文。
+7. 重新打开 `Axure RP 11`。
 
-## Windows 安装步骤
+## Windows 手动安装
 
 1. 完全退出 `Axure RP 11`。
 2. 打开 Axure 安装目录，常见路径类似：
@@ -32,7 +48,7 @@ C:\Program Files (x86)\Axure\Axure RP 11\lang\
 
 ## 更新后失效怎么办
 
-如果 Axure 进行了版本更新，安装程序可能会覆盖原有语言文件。遇到这种情况时，只需要重新执行一次替换操作即可。
+如果 Axure 进行了版本更新，安装程序可能会覆盖原有语言文件。遇到这种情况时，只需要重新执行一次安装脚本或替换操作即可。
 
 ## 常见问题
 

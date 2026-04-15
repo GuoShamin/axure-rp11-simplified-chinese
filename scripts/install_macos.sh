@@ -27,21 +27,21 @@ if [[ -z "$TARGET_APP" ]]; then
 fi
 
 if [[ -z "$TARGET_APP" ]]; then
-  echo "未找到 Axure RP 11.app，请将应用路径作为参数传入。"
-  echo "示例：bash scripts/install_macos.sh \"/Applications/Axure RP 11.app\""
+  echo "Axure RP 11.app was not found. Please pass the app path explicitly."
+  echo "Example: bash scripts/install_macos.sh \"/Applications/Axure RP 11.app\""
   exit 1
 fi
 
 TARGET_FILE="$TARGET_APP/Contents/MacOS/lang/default"
 
 if [[ ! -f "$TARGET_FILE" ]]; then
-  echo "目标语言文件不存在：$TARGET_FILE"
+  echo "Target language file not found: $TARGET_FILE"
   exit 1
 fi
 
 python3 "$VALIDATOR"
 cp "$SOURCE_FILE" "$TARGET_FILE"
 
-echo "安装完成："
+echo "Installation completed:"
 echo "$TARGET_FILE"
-echo "请完全退出 Axure RP 11 后重新打开。"
+echo "Please fully quit Axure RP 11 and reopen it."
